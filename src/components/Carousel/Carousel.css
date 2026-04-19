@@ -39,7 +39,7 @@
   scroll-behavior: smooth;
   padding-bottom: 20px;
   cursor: grab;
-  touch-action: pan-y;
+  touch-action: pan-x;
 }
 
 .carousel-container:active {
