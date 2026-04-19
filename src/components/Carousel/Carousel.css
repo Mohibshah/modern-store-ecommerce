@@ -1,6 +1,7 @@
 .carousel-section {
   padding: 80px 5%;
   background-color: #ffffff;
+  touch-action: auto;
 }
 
 .carousel-header {

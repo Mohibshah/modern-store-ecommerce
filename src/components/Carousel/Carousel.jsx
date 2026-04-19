@@ -11,7 +11,8 @@ const Carousel = () => {
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [quantity, setQuantity] = useState(1);
   const [touchStart, setTouchStart] = useState(0);
-  const [touchEnd, setTouchEnd] = useState(0);
+  const [touchStart, setTouchStart] = useState({ x: 0, y: 0 });
+  const [touchEnd, setTouchEnd] = useState({ x: 0, y: 0 });
   const addItem = useCartStore((state) => state.addItem);
   const toggleWishlist = useWishlistStore((state) => state.toggleItem);
   const isWishlisted = useWishlistStore((state) =>
@@ -30,20 +31,29 @@ const Carousel = () => {
   };
 
   const handleTouchStart = (e) => {
-    setTouchStart(e.targetTouches[0].clientX);
+    setTouchStart({
+      x: e.targetTouches[0].clientX,
+      y: e.targetTouches[0].clientY,
+    });
   };
 
   const handleTouchEnd = (e) => {
-    setTouchEnd(e.changedTouches[0].clientX);
+    setTouchEnd({
+      x: e.changedTouches[0].clientX,
+      y: e.changedTouches[0].clientY,
+    });
     handleSwipe();
   };
 
   const handleSwipe = () => {
-    const swipeDistance = touchStart - touchEnd;
+    const horizontalDistance = Math.abs(touchStart.x - touchEnd.x);
+    const verticalDistance = Math.abs(touchStart.y - touchEnd.y);
     const minSwipeDistance = 50;
 
-    if (Math.abs(swipeDistance) > minSwipeDistance) {
-      if (swipeDistance > 0) {
+    // Only trigger carousel scroll if horizontal movement is greater than vertical
+    // This allows vertical scrolling (page scroll) to pass through
+    if (horizontalDistance > verticalDistance && horizontalDistance > minSwipeDistance) {
+      if (touchStart.x - touchEnd.x > 0) {
         scroll('right');
       } else {
         scroll('left');
