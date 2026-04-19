@@ -40,7 +40,8 @@
   scroll-behavior: smooth;
   padding-bottom: 20px;
   cursor: grab;
-  touch-action: pan-x;
+  touch-action: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .carousel-container:active {
