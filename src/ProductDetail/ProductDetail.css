@@ -1,0 +1,402 @@
+.product-detail-page {
+  padding: 120px 5% 60px; /* Extra top padding for the sticky navbar */
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  justify-content: center;
+  background-color: #fff;
+}
+
+.detail-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  max-width: 1200px;
+  width: 100%;
+}
+
+/* Image Section & Zoom Requirement */
+.image-section {
+  position: sticky;
+  top: 100px;
+  height: fit-content;
+}
+
+.main-img-wrapper {
+  width: 100%;
+  border-radius: 15px;
+  overflow: hidden;
+  background-color: #f9f9f9;
+  cursor: crosshair;
+}
+
+.zoom-effect {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.5s ease;
+  object-fit: cover;
+}
+
+.main-img-wrapper:hover .zoom-effect {
+  transform: scale(1.5); /* The "Zoom" effect from your roadmap */
+}
+
+.thumb-row {
+  margin-top: 14px;
+  display: flex;
+  gap: 12px;
+}
+
+.thumb-btn {
+  border: 1px solid #ddd;
+  background: #fff;
+  border-radius: 10px;
+  padding: 4px;
+  cursor: pointer;
+}
+
+.thumb-btn.active {
+  border-color: #646cff;
+}
+
+.thumb-btn img {
+  width: 72px;
+  height: 72px;
+  object-fit: cover;
+  display: block;
+  border-radius: 6px;
+}
+
+/* Info Section */
+.info-section {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  text-align: left;
+}
+
+.info-section h1 {
+  font-size: 2.5rem;
+  margin: 0;
+  color: #1a1a1a;
+}
+
+.detail-price {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #646cff;
+}
+
+.meta-line {
+  margin: 0;
+  color: #666;
+}
+
+.size-selector {
+  margin: 20px 0;
+}
+
+.size-btns {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.size-btns button {
+  padding: 12px 20px;
+  border: 1px solid #ddd;
+  background: white;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: 0.2s;
+}
+
+.size-btns button.active {
+  background: #1a1a1a;
+  color: white;
+  border-color: #1a1a1a;
+}
+
+.q-btns {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.q-btns input {
+  width: 72px;
+  padding: 8px;
+  text-align: center;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+.q-btns button {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  cursor: pointer;
+  background: #fff;
+}
+
+/* Buttons */
+.action-btns {
+  display: flex;
+  gap: 10px;
+}
+
+.add-to-cart-btn {
+  flex: 1;
+  padding: 18px;
+  background: #646cff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.add-to-cart-btn:hover {
+  background: #535bf2;
+  transform: translateY(-2px);
+}
+
+.wishlist-btn {
+  padding: 18px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  background: #fff;
+  cursor: pointer;
+}
+
+.wishlist-btn.active {
+  background: #fee2e2;
+  color: #b91c1c;
+  border-color: #fecaca;
+}
+
+.reviews {
+  border-top: 1px solid #ececec;
+  padding-top: 20px;
+}
+
+.reviews h3 {
+  margin-top: 0;
+}
+
+.review-form {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.review-form input,
+.review-form select,
+.review-form textarea {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  font: inherit;
+}
+
+.review-form button {
+  width: fit-content;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 14px;
+  background: #1a1a1a;
+  color: #fff;
+  cursor: pointer;
+}
+
+.review-list {
+  display: grid;
+  gap: 10px;
+}
+
+.review-card {
+  border: 1px solid #ececec;
+  border-radius: 10px;
+  padding: 12px;
+  background: #fff;
+}
+
+.review-card p {
+  margin: 0;
+}
+
+.review-card p + p {
+  margin-top: 6px;
+  color: #444;
+}
+
+.related-strip h3 {
+  margin: 0 0 14px;
+}
+
+.related-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+  gap: 14px;
+}
+
+.related-card {
+  display: block;
+  text-decoration: none;
+  color: #111;
+  border: 1px solid #ececec;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.related-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.related-card span {
+  display: block;
+  padding: 10px;
+  font-weight: 600;
+}
+
+/* Inside ProductDetail.css */
+.main-img-wrapper {
+  overflow: hidden; /* Important for zoom! */
+  border-radius: 12px;
+}
+
+.zoom-effect {
+  width: 100%;
+  transition: transform 0.5s ease;
+}
+
+/* Roadmap Requirement: Image Zoom on Hover */
+.main-img-wrapper:hover .zoom-effect {
+  transform: scale(1.2);
+}
+
+/* Responsive Logic */
+@media (max-width: 900px) {
+  .detail-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .image-section {
+    position: relative;
+    top: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .product-detail-page {
+    padding: 94px 4% 40px;
+    gap: 24px;
+  }
+
+  .info-section h1 {
+    font-size: 1.7rem;
+  }
+
+  .detail-price {
+    font-size: 1.4rem;
+  }
+
+  .thumb-row {
+    overflow-x: auto;
+    padding-bottom: 6px;
+  }
+
+  .thumb-btn {
+    flex: 0 0 auto;
+  }
+
+  .thumb-btn img {
+    width: 62px;
+    height: 62px;
+  }
+
+  .size-btns {
+    flex-wrap: wrap;
+  }
+
+  .size-btns button {
+    flex: 1 1 calc(50% - 10px);
+  }
+
+  .q-btns {
+    width: 100%;
+  }
+
+  .q-btns input {
+    width: 64px;
+  }
+
+  .action-btns {
+    flex-direction: column;
+  }
+
+  .add-to-cart-btn,
+  .wishlist-btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-detail-page {
+    padding: 84px 4% 34px;
+    gap: 20px;
+  }
+
+  .detail-container {
+    gap: 20px;
+  }
+
+  .info-section h1 {
+    font-size: 1.45rem;
+  }
+
+  .description,
+  .meta-line,
+  .breadcrumb {
+    font-size: 0.92rem;
+  }
+
+  .thumb-row {
+    gap: 8px;
+  }
+
+  .thumb-btn img {
+    width: 56px;
+    height: 56px;
+  }
+
+  .review-form input,
+  .review-form select,
+  .review-form textarea {
+    padding: 9px;
+  }
+
+  .related-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .related-card img {
+    height: 120px;
+  }
+
+  .related-card span {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+
+  .reviews {
+    padding-top: 16px;
+  }
+}

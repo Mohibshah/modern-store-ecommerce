@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="1000" viewBox="0 0 800 1000">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f59e0b" />
+      <stop offset="100%" stop-color="#b45309" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="1000" rx="36" fill="url(#bg)" />
+  <circle cx="630" cy="190" r="110" fill="rgba(255,255,255,0.12)" />
+  <circle cx="160" cy="830" r="190" fill="rgba(255,255,255,0.08)" />
+  <path d="M330 230 C350 260 360 285 400 300 C440 285 450 260 470 230 L535 280 L500 395 L470 385 L470 700 L330 700 L330 385 L300 395 L265 280 Z" fill="#fff7ed" opacity="0.92" />
+  <path d="M355 290 C370 315 385 330 400 335 C415 330 430 315 445 290" fill="none" stroke="#fb923c" stroke-width="12" stroke-linecap="round" />
+  <path d="M330 385 L470 385" stroke="#fb923c" stroke-width="10" stroke-linecap="round" opacity="0.7" />
+  <path d="M330 460 L470 460" stroke="#fb923c" stroke-width="10" stroke-linecap="round" opacity="0.45" />
+  <path d="M330 530 L470 530" stroke="#fb923c" stroke-width="10" stroke-linecap="round" opacity="0.35" />
+  <text x="400" y="760" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="52" font-weight="700" fill="#ffffff">Summer Floral Dress</text>
+  <text x="400" y="810" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" fill="#ffffff" opacity="0.85">Light and seasonal</text>
+</svg>

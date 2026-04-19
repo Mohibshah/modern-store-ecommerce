@@ -1,0 +1,161 @@
+.grid-section {
+  padding: 60px 5%;
+  background: #fdfdfd;
+}
+
+.grid-header {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.category-container {
+  display: grid;
+  /* Defining a complex grid layout */
+  grid-template-areas: 
+    "men women"
+    "men acc"
+    "new new";
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(3, minmax(180px, 1fr));
+  gap: 20px;
+  height: clamp(620px, 78vh, 860px);
+}
+
+/* Roadmap Requirement: Custom aspect-ratio and Hover Zoom */
+.category-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  border: none;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.category-card:focus-visible {
+  outline: 3px solid #646cff;
+  outline-offset: 4px;
+}
+
+.zoom-wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background: #0b1220;
+}
+
+.zoom-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 32%;
+  transition: transform 0.6s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+}
+
+.category-card:hover img {
+  transform: scale(1.06);
+}
+
+.category-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(5, 10, 24, 0.08) 0%, rgba(5, 10, 24, 0.52) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease;
+}
+
+.category-card:hover .category-overlay {
+  background: linear-gradient(180deg, rgba(5, 10, 24, 0.16) 0%, rgba(5, 10, 24, 0.62) 100%);
+}
+
+.category-card:active .category-overlay,
+.category-card:focus-visible .category-overlay {
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.category-card:active img,
+.category-card:focus-visible img {
+  transform: scale(1.04);
+}
+
+.category-overlay h3 {
+  color: white;
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 0 6px 24px rgba(0, 0, 0, 0.55);
+}
+
+/* Assigning Grid Areas */
+.men { grid-area: men; }
+.women { grid-area: women; }
+.acc { grid-area: acc; }
+.new { grid-area: new; }
+
+.men .zoom-wrapper img {
+  object-position: center 24%;
+}
+
+.women .zoom-wrapper img {
+  object-position: center 20%;
+}
+
+.acc .zoom-wrapper img {
+  object-position: center 35%;
+}
+
+.new .zoom-wrapper img {
+  object-position: center 50%;
+}
+
+/* Responsive adjustments for mobile */
+@media (max-width: 768px) {
+  .category-container {
+    grid-template-areas: 
+      "men"
+      "women"
+      "acc"
+      "new";
+    grid-template-columns: 1fr;
+    grid-template-rows: none;
+    height: auto;
+  }
+  
+  .category-card {
+    aspect-ratio: 4 / 3;
+  }
+
+  .category-overlay h3 {
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+  }
+}
+
+@media (max-width: 480px) {
+  .grid-section {
+    padding: 42px 4%;
+  }
+
+  .grid-header {
+    margin-bottom: 24px;
+  }
+
+  .category-overlay h3 {
+    font-size: 1.1rem;
+  }
+
+  .category-container {
+    gap: 14px;
+  }
+
+  .category-overlay {
+    padding: 10px;
+    text-align: center;
+  }
+}

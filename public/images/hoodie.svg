@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="1000" viewBox="0 0 800 1000">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#7c3aed" />
+      <stop offset="100%" stop-color="#5b21b6" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="1000" rx="36" fill="url(#bg)" />
+  <circle cx="640" cy="180" r="120" fill="rgba(255,255,255,0.12)" />
+  <circle cx="160" cy="820" r="190" fill="rgba(255,255,255,0.08)" />
+  <path d="M295 260 C315 215 340 205 400 205 C460 205 485 215 505 260 L550 320 L520 360 L520 705 L280 705 L280 360 L250 320 Z" fill="#f5f3ff" opacity="0.92" />
+  <path d="M350 225 C365 250 380 265 400 270 C420 265 435 250 450 225" fill="none" stroke="#4c1d95" stroke-width="14" stroke-linecap="round" />
+  <path d="M330 365 C350 420 450 420 470 365" fill="none" stroke="#4c1d95" stroke-width="12" stroke-linecap="round" opacity="0.75" />
+  <rect x="330" y="380" width="140" height="210" rx="24" fill="rgba(76,29,149,0.12)" />
+  <text x="400" y="760" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="52" font-weight="700" fill="#ffffff">Urban Hoodie</text>
+  <text x="400" y="810" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" fill="#ffffff" opacity="0.85">Relaxed everyday fit</text>
+</svg>

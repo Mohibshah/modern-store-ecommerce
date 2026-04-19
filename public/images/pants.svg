@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="1000" viewBox="0 0 800 1000">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#2563eb" />
+      <stop offset="100%" stop-color="#1d4ed8" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="1000" rx="36" fill="url(#bg)" />
+  <circle cx="640" cy="170" r="120" fill="rgba(255,255,255,0.12)" />
+  <circle cx="160" cy="820" r="190" fill="rgba(255,255,255,0.08)" />
+  <path d="M315 220 L485 220 L515 705 L430 705 L400 330 L370 705 L285 705 Z" fill="#eff6ff" opacity="0.92" />
+  <path d="M315 220 L400 330 L485 220" fill="none" stroke="#1e3a8a" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M400 330 L400 705" stroke="#1e3a8a" stroke-width="10" stroke-linecap="round" opacity="0.7" />
+  <text x="400" y="760" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="52" font-weight="700" fill="#ffffff">Chino Pants</text>
+  <text x="400" y="810" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" fill="#ffffff" opacity="0.85">Tailored casual wear</text>
+</svg>

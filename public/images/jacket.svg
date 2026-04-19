@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="1000" viewBox="0 0 800 1000">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#334155" />
+      <stop offset="100%" stop-color="#1e293b" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="1000" rx="36" fill="url(#bg)" />
+  <circle cx="630" cy="180" r="110" fill="rgba(255,255,255,0.12)" />
+  <circle cx="170" cy="830" r="190" fill="rgba(255,255,255,0.08)" />
+  <path d="M290 250 L350 205 L400 255 L450 205 L510 250 L560 330 L525 360 L525 705 L275 705 L275 360 L240 330 Z" fill="#f8fafc" opacity="0.88" />
+  <path d="M350 205 L400 270 L450 205" fill="none" stroke="#0f172a" stroke-width="16" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M275 360 L220 470 L260 510 L305 445" fill="none" stroke="#f8fafc" stroke-width="16" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M525 360 L580 470 L540 510 L495 445" fill="none" stroke="#f8fafc" stroke-width="16" stroke-linecap="round" stroke-linejoin="round" />
+  <text x="400" y="760" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="52" font-weight="700" fill="#ffffff">Denim Jacket</text>
+  <text x="400" y="810" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" fill="#ffffff" opacity="0.85">Classic street layer</text>
+</svg>

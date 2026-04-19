@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1200" viewBox="0 0 1200 1200">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1f2937" />
+      <stop offset="100%" stop-color="#111827" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="1200" rx="48" fill="url(#bg)" />
+  <circle cx="930" cy="210" r="140" fill="rgba(255,255,255,0.12)" />
+  <circle cx="260" cy="930" r="220" fill="rgba(255,255,255,0.08)" />
+  <path d="M400 310 L600 230 L800 310 L900 420 L840 480 L840 900 L360 900 L360 480 L300 420 Z" fill="#f8fafc" opacity="0.9" />
+  <text x="600" y="1030" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="90" font-weight="700" fill="#ffffff">Men</text>
+</svg>

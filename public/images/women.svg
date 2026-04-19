@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1200" viewBox="0 0 1200 1200">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#db2777" />
+      <stop offset="100%" stop-color="#9d174d" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="1200" rx="48" fill="url(#bg)" />
+  <circle cx="930" cy="210" r="140" fill="rgba(255,255,255,0.12)" />
+  <circle cx="260" cy="930" r="220" fill="rgba(255,255,255,0.08)" />
+  <path d="M520 260 C560 220 640 220 680 260 C740 320 770 380 800 440 L900 910 L300 910 L400 440 C430 380 460 320 520 260 Z" fill="#fff1f2" opacity="0.95" />
+  <text x="600" y="1030" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="90" font-weight="700" fill="#ffffff">Women</text>
+</svg>
